@@ -18,4 +18,10 @@ class graph:
         return res
 n = int(input("Enter the number of nodes you want: "))
 g = graph(n)
-n = int(input("Enter the number of edges you want: "))
+m = int(input("Enter the number of edges you want: "))
+
+for i in range(m):
+    x, y = map(int, list(input().split()))
+    g.create_edge(x, y)
+result = g.dfs(0)
+print(result)
